@@ -1,6 +1,12 @@
 body{
     background-color: black;
 }
+footer{
+    text-align: center;
+    color: #e6d62b;
+    background: linear-gradient(0deg, rgba(0,0,0,1) 38%, rgba(20,85,204,1) 96%);
+    padding: 20px;
+}
 /* Classes réutilisables */
 .imgFluide{
     max-width: 100%;
@@ -9,10 +15,13 @@ body{
 .zindex50{
     z-index: 49;
 }
+.textRight{
+    text-align: right;
+}
 /* Navigation */
 header{
     width: 100%;
-    background-color: #9caac5;
+    background-color: #e6d62b;
     padding: 10px;
     padding-bottom: 30px;
     overflow: hidden;
@@ -80,46 +89,6 @@ header a.icon{
     stroke-dashoffset: -134;
     stroke-width: 6;
   }
-@media screen and (min-width: 768px){
-    header a.icon {
-        display: none;
-    }
-    #liens{
-        display: flex;
-        position: absolute;
-        right: 10px;
-        top: 30px;
-        
-    }
-    header{
-        padding-bottom: 10px;
-    }
-    header a{
-        transition: background-color 1s;
-        border-radius: 10px 100px / 120px;
-    }
-    header .un:hover{
-        background-color: #1454cc6e;
-        color: #fded2a;
-        box-shadow: 0px 0px 65px -2px rgba(20,84,204,1);
-    }
-    .un {
-        display: inline-block;
-      }
-      
-      .un::after {
-        content: '';
-        width: 0px;
-        height: 1px;
-        display: block;
-        background: black;
-        transition: 300ms;
-      }
-      
-      .un:hover::after {
-        width: 100%;
-      }
-}
 
 
 
@@ -165,4 +134,94 @@ header a.icon{
 
 #logo{
     width: 120px;
+}
+#scrollDownIcon{
+    width: 50px;
+    color: white;
+    position: absolute;
+    right: 45%;
+    bottom: 0;
+    opacity: 80%;
+}
+
+/* Section Présentation Moto */
+#presMoto{
+    display: flex;
+    flex-flow: row wrap;
+    margin-top: 50px;
+}
+#presMoto h2{
+    padding-top: 60px;
+    color: #e6d62b;
+}
+#presMoto p{
+    color: white;
+}
+.gauche{
+    width: 55%;
+}
+.encar{
+    width: 45%;
+}
+.glowJaune{
+    text-shadow: 0px 0px 10px #fded2a, 0px 0px 10px #fded2a;
+
+}
+#titre2{
+    margin-top: 180px;
+}
+@media screen and (max-width: 1732px){
+    #presMoto h2{
+        padding-top: 40px;
+    }
+}
+@media screen and (max-width: 1559px){
+    #presMoto h2{
+        padding-top: 20px;
+    }
+}
+@media screen and (max-width: 1550px){
+    #titre2{
+        margin-top: 100px;
+    }
+}
+/* MEDIA QUERIES */
+
+@media screen and (min-width: 768px){
+    header a.icon {
+        display: none;
+    }
+    #liens{
+        display: flex;
+        position: absolute;
+        right: 10px;
+        top: 30px;
+        
+    }
+    header{
+        padding-bottom: 10px;
+    }
+    header a{
+        transition: text-shadow 1s;
+    }
+    header .un:hover{
+        color: #fded2a;
+        text-shadow: 0px 0px 65px rgba(20,84,204,1), 0px 0px 65px rgba(20,84,204,1),0px 0px 65px rgba(20,84,204,1),0px 0px 65px rgba(20,84,204,1);
+    }
+    .un {
+        display: inline-block;
+      }
+      
+      .un::after {
+        content: '';
+        width: 0px;
+        height: 1px;
+        display: block;
+        background: black;
+        transition: 300ms;
+      }
+      
+      .un:hover::after {
+        width: 100%;
+      }
 }
