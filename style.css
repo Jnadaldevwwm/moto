@@ -2,18 +2,23 @@
 header{
     background-color: #DBE2F0;
     padding: 10px;
+    padding-bottom: 30px;
     overflow: hidden;
     position: relative;
 }
-header #liens{
+#liens{
     display: none;
+
 }
 header a{
+    color: #2e0f11;
+    padding: 14px 16px;
     text-decoration: none;
-    display: block;
+    font-size: 20px;
+    display: block;;
 }
+
 header a.icon{
-    background-color: black;
     display: block;
     position: absolute;
     right: 0;
@@ -61,10 +66,30 @@ header a.icon{
     stroke-dashoffset: -134;
     stroke-width: 6;
   }
+@media screen and (min-width: 768px){
+    header a.icon {
+        display: none;
+    }
+    #liens{
+        display: flex;
+        position: absolute;
+        right: 10px;
+        top: 30px;
+    }
+    header{
+        padding-bottom: 10px;
+    }
+    header a:hover{
+        background-color: #a9aeb9;
+        text-decoration: underline;
+    }
+}
 
+
+/* Carousel**/
 
 
 
 #logo{
-    width: 100px;
+    width: 120px;
 }
