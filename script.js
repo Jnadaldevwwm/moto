@@ -7,6 +7,14 @@ function hamburger(){
     }
 }
 
+// Nous rejoindre
+document.getElementById('zoneRejoindre').addEventListener('mouseenter', ()=>{
+    document.getElementById('expendedNav').setAttribute('class', 'dBlock');
+});
+document.getElementById('zoneRejoindre').addEventListener('mouseleave', ()=>{ 
+    document.getElementById('expendedNav').setAttribute('class', 'dNone');
+});
+
 // carousel 
 function switchCarous(){
     switch(currentSlide){
