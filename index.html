@@ -5,18 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accueil</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="normalize.css">
     <script src="script.js" async></script>
 </head>
 <body>
     <header>
         <a href="#home" class='active'><img src="images/logo.png" alt="Logo" id='logo'></a>
         <div id="liens">
-            <a href="">Accueil</a>
-            <a href="">Contact</a>
-            <a href="">Equipe</a>
-            <a href="">Presse</a>
-            <a href="">Nous rejoindre</a>
-            <a href="">FAQ</a>
+            <a href="" class='un'>Accueil</a>
+            <a href="" class='un'>Contact</a>
+            <a href="" class='un'>Equipe</a>
+            <a href="" class='un'>Presse</a>
+            <div>
+                <a href="" class='un'>Nous rejoindre ⇣</a>
+            </div>
+            <a href="" class='un'>FAQ</a>
         </div>
         <a href="javascript:void(0);" class="icon" onclick="hamburger()">
             <button class="menu" onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))" aria-label="Main Menu">
@@ -28,6 +31,14 @@
               </button>
         </a>
     </header>
-  
+    <section id='topPage'>
+        <h1 id="punchline" class='zindex50'>LA MOTO </h1>
+        <p id='punchTexte' class='zindex50'>Avec notre nouvelle moto Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum doloremque, ipsa reprehenderit ducimus perferendis dignissimos expedita harum illo repellendus impedit!</p>
+        <div id='carousel'>
+            <img src="images/slide1.jpg" alt="slider 1" class='imgFluide carVisible' id='sld0'>
+            <img src="images/slide2.jpg" alt="slider 2" class='imgFluide carCache' id='sld1'>
+            <img src="images/slide3.jpg" alt="slider 3" class='imgFluide carCache' id='sld2'>
+        </div>
+    </section>
 </body>
 </html>

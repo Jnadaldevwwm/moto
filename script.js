@@ -7,30 +7,29 @@ function hamburger(){
     }
 }
 
-var
-	carousel = document.querySelector('.carousel'),
-	figure = carousel.querySelector('figure'),
-	nav = carousel.querySelector('nav'),
-	numImages = figure.childElementCount,
-	theta =  2 * Math.PI / numImages,
-	currImage = 0
-;
-	
-nav.addEventListener('click', onClick, true);
-
-function onClick(e) {
-	e.stopPropagation();
-	
-	var t = e.target;
-	if (t.tagName.toUpperCase() != 'BUTTON')
-		return;
-	
-	if (t.classList.contains('next')) {
-		currImage++;
-	}
-	else {
-		currImage--;
-	}
-	
-	figure.style.transform = `rotateY(${currImage * -theta}rad)`;
+// carousel 
+function switchCarous(){
+    switch(currentSlide){
+        case 0 :
+            slides[0].setAttribute('class', 'imgFluide carCache');
+            slides[1].setAttribute('class', 'imgFluide carVisible');
+            currentSlide = 1;
+            break;
+        case 1 :
+            slides[1].setAttribute('class', 'imgFluide carCache');
+            slides[2].setAttribute('class', 'imgFluide carVisible');
+            currentSlide = 2;
+            break;
+        case 2 :
+            slides[2].setAttribute('class', 'imgFluide carCache');
+            slides[0].setAttribute('class', 'imgFluide carVisible');
+            currentSlide = 0;
+            break;
+        case 3 :
+            currentSlide=0;
+            break;
+    }
 }
+var currentSlide = 3;
+var slides = document.querySelectorAll('#carousel img');
+var interCar = setInterval(switchCarous, 5000);
